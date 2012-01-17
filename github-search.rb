@@ -10,10 +10,18 @@ class GitHubSearch < Sinatra::Base
 
   get '/:owner/:repository/?*' do
     result = nil
-    if params['q']
-      result = params['q']
+    owner = params['owner']
+    repository = params['repository']
+    data_dir = "#{File.dirname(__FILE__)}/data"
+    if File.directory?("#{data_dir}/#{owner}/#{repository}")
+      `cd #{data_dir}/#{owner}/#{repository} && git pull`
+    else
+      `mkdir -p #{data_dir}/#{owner} && cd #{data_dir}/#{owner} && git clone https://github.com/#{owner}/#{repository}.git`
     end
-    erb :index, locals: {owner: params['owner'], repository: params['repository'], result: result}
+    if params['q']
+      result = `cd #{data_dir}/#{owner}/#{repository} && ack-grep -a '#{params['q']}'`
+    end
+    erb :index, locals: {owner: owner, repository: repository, result: result}
   end
 end
 
