@@ -8,6 +8,6 @@ GitHub Search is released under the MIT license.
 
 Authors
 ------
-[Andre Meij](https://github.com/ahmeij)
-[Mark Kremer](https://github.com/mkremer)
+- [Andre Meij](https://github.com/ahmeij)
+- [Mark Kremer](https://github.com/mkremer)
 
