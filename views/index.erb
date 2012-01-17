@@ -11,7 +11,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
     <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
       body {
@@ -19,9 +18,7 @@
       }
     </style>
   </head>
-
   <body>
-
     <div class="topbar">
       <div class="topbar-inner">
         <div class="container-fluid">
@@ -37,7 +34,6 @@
 
     <div class="container">
       <div class="content">
-        <!-- Main hero unit for a primary marketing message or call to action -->
         <div class="hero-unit">
           <form>
             <fieldset>
@@ -50,20 +46,18 @@
             </fieldset>
           </form>
         </div>
-        <!-- Example row of columns -->
+        <% if result %>
         <div class="row">
           <div class="span16">
             <h2>Results</h2>
-            <pre>
-              Your stuff here
-            </pre>
+            <pre><%= result %></pre>
           </div>
         </div>
+        <% end %>
         <footer>
           <p>&copy; Mark &amp; Andre 2012</p>
         </footer>
       </div>
     </div>
-
   </body>
 </html>
