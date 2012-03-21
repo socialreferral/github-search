@@ -26,7 +26,7 @@ class GitHubSearch < Sinatra::Base
         file_name = match_data[1]
         line_number = match_data[3].to_i
         snip.gsub!(/^.*(-\d+-|:\d+:)/, '')
-        CodeRay.scan(snip, :ruby).div(:line_numbers => :table, :line_number_start => line_number)
+        "<h4>#{file_name}</h4>" + CodeRay.scan(snip, :ruby).div(:line_numbers => :table, :line_number_start => line_number)
       end
       result = result.join("")
     end
