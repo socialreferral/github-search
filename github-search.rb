@@ -30,7 +30,7 @@ class GitHubSearch < Sinatra::Base
       end
       result = result.join("")
     end
-    erb :index, locals: {owner: owner, repository: repository, result: result}
+    erb :repository, locals: {owner: owner, repository: repository, result: result}
   end
 end
 

@@ -34,17 +34,10 @@
 
     <div class="container">
       <div class="content">
-        <div class="hero-unit">
-          <form>
-            <fieldset>
-              <div class="clearfix">
-                <div class="input">
-                  <input type="text" id="q" class="xlarge" size="30" name="q"/>
-                  <input class="btn primary" type="submit" value="Search"/>
-                </div>
-              </div>
-            </fieldset>
-          </form>
+        <div class="hero-unit">  
+          <p>Go to githubsearch.com/&lt;owner&gt;/&lt;repository&gt;</p> and enter a search query in the search bar.</p>
+          <p>The first time a repository is requested it will be cloned, before subsequent requests it will be updated. Currently we only support the master branch of a repository.</p>
+          <p color="#999">This implementation is a hack and only meant to solve a very immediate problem we had, a more sufficitacted solution is in development<p>
         </div>
         <% if result %>
         <div class="row">
