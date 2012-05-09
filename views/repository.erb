@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>GitHub Search</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">GitHub Search</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        <div class="hero-unit">
+          <form>
+            <fieldset>
+              <div class="clearfix">
+                <div class="input">
+                  <input type="text" id="q" class="xlarge" size="30" name="q"/>
+                  <input class="btn primary" type="submit" value="Search"/>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <% if result %>
+        <div class="row">
+          <div class="span16">
+            <h2>Results</h2>
+            <%= result %>
+          </div>
+        </div>
+        <% end %>
+        <footer>
+          <p>&copy; Mark &amp; Andre 2012</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
