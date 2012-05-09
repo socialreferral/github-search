@@ -89,7 +89,7 @@ else
   
   write_file "/etc/nginx/sites-available/githubsearch" <<EOF
 upstream frontend {
-   server 127.0.0.1:9292;
+   server 127.0.0.1:9000;
 }
 
 server {
